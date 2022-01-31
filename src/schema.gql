@@ -1,0 +1,33 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type TodosType {
+  id: ID!
+  text: String!
+  completed: Boolean!
+  createdAt: String!
+}
+
+type Query {
+  todos: [TodosType!]!
+  todo(id: Float!): TodosType!
+}
+
+type Mutation {
+  createTodo(todo: TodosInput!): TodosType!
+  updateTodo(todo: UpdateTodos!, id: Float!): TodosType!
+  deleteTodo(id: Float!): TodosType!
+}
+
+input TodosInput {
+  id: ID!
+  text: String!
+  completed: Boolean!
+  createdAt: String!
+}
+
+input UpdateTodos {
+  text: String!
+  completed: Boolean!
+}
